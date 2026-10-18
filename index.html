@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff4f7">
+  <title>Elene's Little Corner 💗</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="floating-decor decor-one" aria-hidden="true">♡</div>
+  <div class="floating-decor decor-two" aria-hidden="true">✦</div>
+  <div class="floating-decor decor-three" aria-hidden="true">♡</div>
+
+  <header class="top-note">
+    <span>made with love</span><span class="tiny-heart">♥</span><span>just for Elene</span>
+  </header>
+
+  <main>
+    <section class="hero paper-card" id="home">
+      <div class="tape tape-pink" aria-hidden="true"></div>
+      <span class="sticker sticker-star" aria-hidden="true">✦</span>
+      <p class="eyebrow">a tiny reminder for a very special human</p>
+      <h1>Hey, Elene! <span class="waving">♡</span></h1>
+      <p class="hero-copy">Take a deep breath, unclench your jaw, drop your shoulders. You don't have to figure everything out today.</p>
+      <p class="hero-highlight">You've got this. And you don't have to do it all alone. 💗</p>
+      <button class="primary-button" id="openLove">Open when you need a little love</button>
+      <div class="hero-stickers" aria-label="Decorative stickers">
+        <span class="pill-sticker">you are enough</span>
+        <span class="pill-sticker yellow">one step at a time</span>
+        <span class="pill-sticker lilac">big things take time</span>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="section-heading">
+        <p class="eyebrow">pick a little reminder</p>
+        <h2>A tiny pocket of encouragement</h2>
+        <p>Tap a sticker. The universe (and your bestie) has something to tell you.</p>
+      </div>
+      <div class="sticker-grid">
+        <button class="big-sticker pink" data-message="You are not behind. You are building your life at your own pace, and that is allowed. 💗">
+          <span class="sticker-art">♡</span><span>you are enough</span>
+        </button>
+        <button class="big-sticker yellow" data-message="Tiny progress is still progress. Ten minutes of practice counts. One deep breath counts. Getting back up counts. ✨">
+          <span class="sticker-art">✦</span><span>tiny steps count</span>
+        </button>
+        <button class="big-sticker blue" data-message="Plot twist: you can be nervous AND capable at the same time. Anxiety doesn't get to predict your result. 🌈">
+          <span class="sticker-art">☁</span><span>nervous ≠ incapable</span>
+        </button>
+        <button class="big-sticker lilac" data-message="Reminder from your bestie: you are a whole person, not a score, a grade, or a checklist. 🫶">
+          <span class="sticker-art">♡</span><span>more than a score</span>
+        </button>
+      </div>
+      <div class="message-card" id="messageCard" aria-live="polite">
+        <span class="message-sparkle">✧</span>
+        <p id="messageText">Click one of the stickers above. A little reminder is waiting for you.</p>
+      </div>
+      <button class="secondary-button" id="randomMessage">Give me a random pep talk ✨</button>
+    </section>
+
+    <section class="section-block two-column">
+      <div class="paper-card hug-card">
+        <div class="tape tape-yellow" aria-hidden="true"></div>
+        <span class="big-emoji" aria-hidden="true">🫂</span>
+        <p class="eyebrow">for the hard moments</p>
+        <h2>Sending you a hug</h2>
+        <p>For when I can't be right next to you, but I still want you to feel supported.</p>
+        <button class="primary-button" id="hugButton">Press for a virtual hug</button>
+        <div id="hugResult" class="hug-result" aria-live="polite"></div>
+      </div>
+
+      <div class="paper-card ielts-card">
+        <div class="tape tape-blue" aria-hidden="true"></div>
+        <span class="sticker sticker-pencil" aria-hidden="true">✎</span>
+        <p class="eyebrow">IELTS survival corner</p>
+        <h2>One exam. Not your whole future.</h2>
+        <ul class="check-list">
+          <li>Take one question at a time.</li>
+          <li>You are allowed to pause and breathe.</li>
+          <li>A difficult practice test is feedback, not a prophecy.</li>
+          <li>Your worth stays the same whatever the result.</li>
+        </ul>
+        <button class="secondary-button" id="ieltsButton">I'm panicking about IELTS 🥺</button>
+        <div id="ieltsResult" class="small-reveal" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section-block feelings-section">
+      <div class="section-heading">
+        <p class="eyebrow">check in with yourself</p>
+        <h2>How are you feeling right now?</h2>
+        <p>No wrong answers. You don't have to pretend you're okay here.</p>
+      </div>
+      <div class="feeling-options" id="feelingOptions">
+        <button class="feeling-option" data-feeling="anxious"><span>🥺</span> Anxious</button>
+        <button class="feeling-option" data-feeling="overwhelmed"><span>🫠</span> Overwhelmed</button>
+        <button class="feeling-option" data-feeling="tired"><span>😴</span> Tired</button>
+        <button class="feeling-option" data-feeling="doubtful"><span>🫥</span> Doubting myself</button>
+        <button class="feeling-option" data-feeling="okay"><span>🌷</span> Doing okay</button>
+      </div>
+      <div class="feeling-result message-card" id="feelingResult" aria-live="polite">
+        <p>Choose the closest feeling, and I'll give you a tiny next step.</p>
+      </div>
+    </section>
+
+    <section class="section-block meme-section" id="meme-wall">
+      <div class="section-heading">
+        <p class="eyebrow">important scientific research</p>
+        <h2>The meme & sticker wall 🐸</h2>
+        <p>For when motivational speeches aren't enough and only a very specific meme will do.</p>
+      </div>
+      <div class="meme-grid">
+        <figure class="meme-card"><img loading="lazy" src="stickers/meme-01.jpg" alt="Funny supportive sticker 1"><figcaption>emergency hug protocol 🫂</figcaption></figure>
+        <figure class="meme-card"><img loading="lazy" src="stickers/meme-02.jpg" alt="Funny supportive sticker 2"><figcaption>proof you are special 💗</figcaption></figure>
+        <figure class="meme-card"><img loading="lazy" src="stickers/meme-03.jpg" alt="Funny supportive sticker 3"><figcaption>certified chaos</figcaption></figure>
+        <figure class="meme-card"><img loading="lazy" src="stickers/meme-04.jpg" alt="Funny supportive sticker 4"><figcaption>tiny reminder, big feelings</figcaption></figure>
+        <figure class="meme-card"><img loading="lazy" src="stickers/meme-05.jpg" alt="Funny supportive sticker 5"><figcaption>bestie-approved wisdom</figcaption></figure>
+        <figure class="meme-card"><img loading="lazy" src="stickers/meme-06.jpg" alt="Funny supportive sticker 6"><figcaption>a meme for the plot</figcaption></figure>
+        <figure class="meme-card"><img loading="lazy" src="stickers/meme-07.jpg" alt="Funny supportive sticker 7"><figcaption>emotional support sticker</figcaption></figure>
+        <figure class="meme-card"><img loading="lazy" src="stickers/meme-08.jpg" alt="Funny supportive sticker 8"><figcaption>laugh first, overthink later</figcaption></figure>
+        <figure class="meme-card"><img loading="lazy" src="stickers/meme-09.jpg" alt="Funny supportive sticker 9"><figcaption>a little serotonin</figcaption></figure>
+        <figure class="meme-card"><img loading="lazy" src="stickers/meme-10.jpg" alt="Funny supportive sticker 10"><figcaption>this is your sign</figcaption></figure>
+        <figure class="meme-card"><img loading="lazy" src="stickers/meme-11.jpg" alt="Funny supportive sticker 11"><figcaption>sending good vibes</figcaption></figure>
+        <figure class="meme-card"><img loading="lazy" src="stickers/meme-12.jpg" alt="Funny supportive sticker 12"><figcaption>you deserve kindness</figcaption></figure>
+        <figure class="meme-card"><img loading="lazy" src="stickers/meme-13.jpg" alt="Funny supportive sticker 13"><figcaption>one more for the collection</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="section-block photo-section" id="memories">
+      <div class="section-heading">
+        <p class="eyebrow">little memories, big love</p>
+        <h2>Our photo corner 📸</h2>
+        <p>A tiny scrapbook of people, places, and moments worth keeping. Tap any photo to see it bigger.</p>
+      </div>
+      <div class="photo-grid photo-grid-full">
+        <figure class="polaroid tilt-left">
+          <button class="photo-open" type="button" data-photo="photos/A61A06B9-A165-4C66-898E-7BA5DE958782.jpeg" aria-label="Open photo: A night out with the whole crew ✨"><img class="real-photo" loading="lazy" src="photos/A61A06B9-A165-4C66-898E-7BA5DE958782.jpeg" alt="A night out with the whole crew ✨"></button>
+          <figcaption>A night out with the whole crew ✨</figcaption>
+        </figure>
+        <figure class="polaroid tilt-right">
+          <button class="photo-open" type="button" data-photo="photos/IMG_9773.jpeg" aria-label="Open photo: A little moment together 💗"><img class="real-photo" loading="lazy" src="photos/IMG_9773.jpeg" alt="A little moment together 💗"></button>
+          <figcaption>A little moment together 💗</figcaption>
+        </figure>
+        <figure class="polaroid tilt-left-small">
+          <button class="photo-open" type="button" data-photo="photos/IMG_9616.jpeg" aria-label="Open photo: City-day memories"><img class="real-photo" loading="lazy" src="photos/IMG_9616.jpeg" alt="City-day memories"></button>
+          <figcaption>City-day memories</figcaption>
+        </figure>
+        <figure class="polaroid tilt-left">
+          <button class="photo-open" type="button" data-photo="photos/IMG_9638.jpeg" aria-label="Open photo: Main-character energy"><img class="real-photo" loading="lazy" src="photos/IMG_9638.jpeg" alt="Main-character energy"></button>
+          <figcaption>Main-character energy</figcaption>
+        </figure>
+        <figure class="polaroid tilt-right">
+          <button class="photo-open" type="button" data-photo="photos/IMG_9575.jpeg" aria-label="Open photo: A tiny reflection of a good day"><img class="real-photo" loading="lazy" src="photos/IMG_9575.jpeg" alt="A tiny reflection of a good day"></button>
+          <figcaption>A tiny reflection of a good day</figcaption>
+        </figure>
+        <figure class="polaroid tilt-left-small">
+          <button class="photo-open" type="button" data-photo="photos/IMG_9442.jpeg" aria-label="Open photo: Friends, chaos, and good times"><img class="real-photo" loading="lazy" src="photos/IMG_9442.jpeg" alt="Friends, chaos, and good times"></button>
+          <figcaption>Friends, chaos, and good times</figcaption>
+        </figure>
+        <figure class="polaroid tilt-left">
+          <button class="photo-open" type="button" data-photo="photos/IMG_9496.jpeg" aria-label="Open photo: The squad 🫶"><img class="real-photo" loading="lazy" src="photos/IMG_9496.jpeg" alt="The squad 🫶"></button>
+          <figcaption>The squad 🫶</figcaption>
+        </figure>
+        <figure class="polaroid tilt-right">
+          <button class="photo-open" type="button" data-photo="photos/IMG_9536.jpeg" aria-label="Open photo: Sunshine and familiar faces"><img class="real-photo" loading="lazy" src="photos/IMG_9536.jpeg" alt="Sunshine and familiar faces"></button>
+          <figcaption>Sunshine and familiar faces</figcaption>
+        </figure>
+        <figure class="polaroid tilt-left-small">
+          <button class="photo-open" type="button" data-photo="photos/IMG_9468.jpeg" aria-label="Open photo: One for the memories"><img class="real-photo" loading="lazy" src="photos/IMG_9468.jpeg" alt="One for the memories"></button>
+          <figcaption>One for the memories</figcaption>
+        </figure>
+        <figure class="polaroid tilt-left">
+          <button class="photo-open" type="button" data-photo="photos/IMG_8910.jpeg" aria-label="Open photo: Cheers to the little things"><img class="real-photo" loading="lazy" src="photos/IMG_8910.jpeg" alt="Cheers to the little things"></button>
+          <figcaption>Cheers to the little things</figcaption>
+        </figure>
+        <figure class="polaroid tilt-right">
+          <button class="photo-open" type="button" data-photo="photos/IMG_8180.jpeg" aria-label="Open photo: Chef Elene in action 🍕"><img class="real-photo" loading="lazy" src="photos/IMG_8180.jpeg" alt="Chef Elene in action 🍕"></button>
+          <figcaption>Chef Elene in action 🍕</figcaption>
+        </figure>
+        <figure class="polaroid tilt-left-small">
+          <button class="photo-open" type="button" data-photo="photos/IMG_8219.jpeg" aria-label="Open photo: A little fresh-air adventure"><img class="real-photo" loading="lazy" src="photos/IMG_8219.jpeg" alt="A little fresh-air adventure"></button>
+          <figcaption>A little fresh-air adventure</figcaption>
+        </figure>
+        <figure class="polaroid tilt-left">
+          <button class="photo-open" type="button" data-photo="photos/IMG_0875.jpeg" aria-label="Open photo: That smile though 💗"><img class="real-photo" loading="lazy" src="photos/IMG_0875.jpeg" alt="That smile though 💗"></button>
+          <figcaption>That smile though 💗</figcaption>
+        </figure>
+        <figure class="polaroid tilt-right">
+          <button class="photo-open" type="button" data-photo="photos/IMG_1631.jpeg" aria-label="Open photo: The most focused little helper"><img class="real-photo" loading="lazy" src="photos/IMG_1631.jpeg" alt="The most focused little helper"></button>
+          <figcaption>The most focused little helper</figcaption>
+        </figure>
+        <figure class="polaroid tilt-left-small">
+          <button class="photo-open" type="button" data-photo="photos/IMG_1685.jpeg" aria-label="Open photo: A backyard kind of day"><img class="real-photo" loading="lazy" src="photos/IMG_1685.jpeg" alt="A backyard kind of day"></button>
+          <figcaption>A backyard kind of day</figcaption>
+        </figure>
+        <figure class="polaroid tilt-left">
+          <button class="photo-open" type="button" data-photo="photos/IMG_1689.jpeg" aria-label="Open photo: Absolutely no chill 😂"><img class="real-photo" loading="lazy" src="photos/IMG_1689.jpeg" alt="Absolutely no chill 😂"></button>
+          <figcaption>Absolutely no chill 😂</figcaption>
+        </figure>
+        <figure class="polaroid tilt-right">
+          <button class="photo-open" type="button" data-photo="photos/IMG_1669.jpeg" aria-label="Open photo: Certified comfy queen"><img class="real-photo" loading="lazy" src="photos/IMG_1669.jpeg" alt="Certified comfy queen"></button>
+          <figcaption>Certified comfy queen</figcaption>
+        </figure>
+        <figure class="polaroid tilt-left-small">
+          <button class="photo-open" type="button" data-photo="photos/IMG_1886(1).jpeg" aria-label="Open photo: A soft little moment 🌿"><img class="real-photo" loading="lazy" src="photos/IMG_1886(1).jpeg" alt="A soft little moment 🌿"></button>
+          <figcaption>A soft little moment 🌿</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section-block letter-section">
+      <div class="paper-card letter-card">
+        <div class="tape tape-lilac" aria-hidden="true"></div>
+        <span class="letter-stamp" aria-hidden="true">FOR<br>ELENE<br>♡</span>
+        <p class="eyebrow">a letter from your bestie</p>
+        <h2>A little something to keep</h2>
+        <p class="letter-teaser">There's a letter here for the days when your brain is being a little too mean to you.</p>
+        <button class="primary-button" id="letterButton" aria-expanded="false" aria-controls="secretLetter">Open your secret letter 💌</button>
+        <article class="secret-letter" id="secretLetter" hidden>
+          <p>Hey, listen to me for a second, okay? ❤️</p>
+          <p>I know that sometimes it feels like everyone around you is doing better, achieving more, and becoming someone while you're just standing still. I know how easy it is to look at other people and start questioning your own worth. But please, don't be so hard on yourself.</p>
+          <p>There will always be someone who is better than you at something. Someone richer, smarter, more successful, more attractive, or further ahead in life. But that doesn't mean you're any less valuable as a person. Life isn't a competition, and you're not falling behind just because someone else is moving faster.</p>
+          <p>You don't have to be the best at everything to be enough. You don't have to prove your worth by achieving something extraordinary. You're allowed to be a work in progress. You're allowed to be confused, to struggle, to make mistakes, and to take your time figuring things out.</p>
+          <p>And please remember that the way you see yourself when you're feeling down isn't necessarily the way you actually are. You're looking at yourself through the eyes of your insecurities, and they're making you forget all the things that make you who you are.</p>
+          <p>I wish you could see yourself the way the people who care about you see you. You'd probably understand that you're so much more than what you give yourself credit for.</p>
+          <p>You don't need to become someone else to deserve happiness, love, or respect. You don't need to be better than everyone around you. You just need to keep becoming a version of yourself that YOU can be proud of, one step at a time.</p>
+          <p>And even on the days when you don't feel like you're enough, that doesn't make it true. Please don't give up on yourself just because you're not where you want to be yet. ❤️</p>
+          <p class="letter-signoff">Always in your corner,<br><strong>Your Bestie</strong> 💗</p>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      <p>Made for Elene, with a little love and a lot of belief in you. ♡</p>
+      <button class="text-button" id="topButton">Back to the top ↑</button>
+    </footer>
+  </main>
+  <div class="photo-modal" id="photoModal" hidden role="dialog" aria-modal="true" aria-label="Expanded scrapbook photo">
+    <button class="photo-modal-close" id="photoModalClose" aria-label="Close photo">×</button>
+    <img id="photoModalImage" src="" alt="Expanded memory">
+    <p id="photoModalCaption"></p>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
